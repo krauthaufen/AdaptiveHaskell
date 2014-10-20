@@ -1,0 +1,26 @@
+name: Adaptive
+version: 0.0.1
+cabal-version: >=1.2
+build-type: Simple
+license: AllRightsReserved
+license-file: ""
+synopsis: Adapive
+description:  
+data-dir: ""
+ 
+executable Adaptive
+    build-depends: QuickCheck -any, base -any, containers -any,
+                   mtl -any, ref-tf -any
+    main-is: Main.hs
+    buildable: True
+    hs-source-dirs: src
+    other-modules: Adaptive
+ 
+test-suite test-Adaptive
+    build-depends: QuickCheck -any, base -any, containers -any,
+                   mtl -any, ref-tf -any
+    type: exitcode-stdio-1.0
+    main-is: Main.hs
+    buildable: True
+    cpp-options: -DMAIN_FUNCTION=testMain
+    hs-source-dirs: src
